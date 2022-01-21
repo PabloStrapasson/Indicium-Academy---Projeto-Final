@@ -1,0 +1,13 @@
+AdventureWorks:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service_account
+      keyfile: ../JSON/adventureworks-338720-38ae9ff720ed.json
+      project: AdventureWorks
+      dataset: dbt_pablo
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive

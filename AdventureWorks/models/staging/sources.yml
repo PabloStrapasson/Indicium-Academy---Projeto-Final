@@ -1,0 +1,117 @@
+version: 2
+
+sources:
+  - name: AdventureWorks_db
+    description: this is a replica of the Postgress database used by our client
+    tables:
+      - name: saleorderheader
+        description: this table contains the records of sales
+        columns:
+          - name: salesorderid
+            description: Primary key of salesorderheader table
+            test:
+              - unique
+              - not_null
+
+      - name: saleorderdetails
+        description: this table contains the details of records of sales
+        columns:
+          - name: salesorderdetailid
+            description: Primary key of saleorderdetails table
+            test:
+              - unique
+              - not_null
+      
+      - name: saleorderheadersalesreason
+        description: this table contains the reason of the sales
+        columns:
+          - name: salesorderid
+            description: Primary key of saleorderheadersalesreason table
+            test: 
+              - not_null
+
+      - name: salesreason
+        description: this table contains the reason of the sales
+        columns:
+          - name: salesreasonid
+            description: Primary key of salesreason table
+            test:
+              - unique
+              - not_null
+
+      - name: address
+        description: this table contains the addres records
+        columns:
+          - name: addressid
+            description: Primary key of address table
+            test:
+              - unique
+              - not_null
+      
+      - name: countryregion
+        description: this table contains the countryregion records
+        columns:
+          - name: countryregioncode
+            description: Primary key of countryregion table
+      
+      - name: creditcard
+        description: this table contains the creditcard records
+        columns:
+          - name: creditcardid
+            description: Primary key of creditcard table
+            test:
+              - unique
+              - not_null
+      
+      - name: customer
+        description: this table contains the customer records
+        columns:
+          - name: customerid
+            description: Primary key of customer table
+            test:
+              - unique
+              - not_null
+      
+      - name: emailaddress
+        description: this table contains the emailaddress records
+        columns:
+          - name: emailaddressid
+            description: Primary key of emailaddress table
+            test:
+              - unique
+              - not_null
+
+      - name: person
+        description: this table contains the person records
+        columns:
+          - name: businessentityid
+            description: Primary key of person table
+            test:
+              - unique
+              - not_null
+      
+      - name: specialoffer
+        description: this table contains the specialoffer records
+        columns:
+          - name: specialofferid
+            description: Primary key of specialoffer table
+            test:
+              - unique
+              - not_null
+      
+      - name: specialofferproduct
+        description: this table contains the specialofferproduct records
+        columns:
+          - name: productid
+            description: Primary key of specialofferproduct table
+            test:
+              - not_null
+      
+      - name: stateprovince
+        description: this table contains the stateprovince records
+        columns:
+          - name: stateprovinceid
+            description: Primary key of stateprovince table
+            test:
+              - unique
+              - not_null
